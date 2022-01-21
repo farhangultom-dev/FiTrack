@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinancialTracking">
         <activity
-            android:name=".ui.InputProfileActivity"
+            android:name=".ui.inputprofile.InputProfileActivity"
             android:exported="true" />
         <activity
             android:name=".ui.inputsalary.InputSalaryActivity"

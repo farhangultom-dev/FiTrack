@@ -3,11 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/projek/FinancialTracking/app/src/main/res/layout/activity_home.xml" value="0.19519927536231885" />
+        <entry key="..\:/projek/FinancialTracking/app/src/main/res/drawable/bg_btn_green.xml" value="0.2169230769230769" />
+        <entry key="..\:/projek/FinancialTracking/app/src/main/res/layout/activity_home.xml" value="0.22" />
+        <entry key="..\:/projek/FinancialTracking/app/src/main/res/layout/activity_input_profile.xml" value="0.22" />
+        <entry key="..\:/projek/FinancialTracking/app/src/main/res/layout/activity_input_salary.xml" value="0.25" />
         <entry key="..\:/projek/FinancialTracking/app/src/main/res/layout/activity_main.xml" value="0.12771739130434784" />
         <entry key="..\:/projek/FinancialTracking/app/src/main/res/layout/activity_onboarding.xml" value="0.19927536231884058" />
         <entry key="..\:/projek/FinancialTracking/app/src/main/res/layout/activity_splash.xml" value="0.22" />
         <entry key="..\:/projek/FinancialTracking/app/src/main/res/layout/item_onboarding.xml" value="0.19927536231884058" />
+        <entry key="..\:/projek/FinancialTracking/app/src/main/res/layout/item_salary.xml" value="0.25" />
+        <entry key="..\:/projek/FinancialTracking/app/src/main/res/layout/item_tracking.xml" value="0.25" />
       </map>
     </option>
   </component>

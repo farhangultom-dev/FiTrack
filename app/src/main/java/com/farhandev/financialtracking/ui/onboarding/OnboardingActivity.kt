@@ -1,5 +1,6 @@
 package com.farhandev.financialtracking.ui.onboarding
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -7,15 +8,18 @@ import android.widget.Toast
 import androidx.viewpager.widget.ViewPager
 import com.farhandev.financialtracking.R
 import com.farhandev.financialtracking.databinding.ActivityOnboardingBinding
+import com.farhandev.financialtracking.sharedpreferences.PrefManager
+import com.farhandev.financialtracking.ui.inputprofile.InputProfileActivity
 import java.util.*
 
 class OnboardingActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityOnboardingBinding
+    private lateinit var pref: PrefManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityOnboardingBinding.inflate(layoutInflater)
+        pref = PrefManager(this)
         setContentView(binding.root)
 
         val imgs = listOf(R.drawable.ic_slide_1,R.drawable.ic_slide_2,R.drawable.ic_slide_3)
@@ -34,7 +38,8 @@ class OnboardingActivity : AppCompatActivity() {
                 onBackPressed()
             }
             btnStart.setOnClickListener {
-                Toast.makeText(this@OnboardingActivity, "klik", Toast.LENGTH_SHORT).show()
+                pref.put("offOnBoarding",0)
+                startActivity(Intent(this@OnboardingActivity, InputProfileActivity::class.java))
             }
         }
     }

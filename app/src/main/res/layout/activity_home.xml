@@ -4,6 +4,127 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.home.HomeActivity">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_btn_green"
+        android:padding="7dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_baseline_notifications_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/fanny_photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_label"
+        style="@style/textGreen16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Welcome Back!"
+        app:layout_constraintStart_toEndOf="@+id/circleImageView"
+        app:layout_constraintTop_toTopOf="@+id/circleImageView" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/textGreenBold24sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Minami Hamabe"
+        app:layout_constraintBottom_toBottomOf="@+id/circleImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/circleImageView"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="-30dp"
+        android:backgroundTint="@color/green"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circleImageView" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_income"
+                style="@style/textWhiteBold24sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Rp.15.000.000"
+                app:layout_constraintEnd_toStartOf="@+id/tv_expense"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_label_income"
+                style="@style/textWhite18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monthly Expense"
+                app:layout_constraintEnd_toEndOf="@+id/tv_income"
+                app:layout_constraintStart_toStartOf="@+id/tv_income"
+                app:layout_constraintTop_toBottomOf="@+id/tv_income" />
+
+            <TextView
+                android:id="@+id/tv_expense"
+                style="@style/textWhiteBold24sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Rp.10.000.000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tv_income"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_label_expense"
+                style="@style/textWhite18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expenses Now"
+                app:layout_constraintEnd_toEndOf="@+id/tv_expense"
+                app:layout_constraintStart_toStartOf="@+id/tv_expense"
+                app:layout_constraintTop_toBottomOf="@+id/tv_expense" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_tracking"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="30dp"
+                tools:listitem="@layout/item_tracking"
+                android:clipToPadding="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_label_income" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

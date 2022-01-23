@@ -58,6 +58,12 @@
         <item name="android:textSize">18sp</item>
     </style>
 
+    <style name="textWhite14sp">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
     <style name="textWhiteBold24sp">
         <item name="android:textColor">@color/white</item>
         <item name="android:fontFamily">@font/poppins_medium</item>
